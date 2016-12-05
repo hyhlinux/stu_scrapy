@@ -5,24 +5,27 @@ import urllib
 import config
 
 
-def tiebaSpider(kw='qinshimingyue', beginPage=1, endPage=1):
+def tiebaSpider(kw='秦时明月', beginPage=1, endPage=3):
+    name = kw
     kw = urllib.urlencode(dict(kw=kw))
-    print kw
     beginPage = int(beginPage)
     endPage = int(endPage)
+    print kw, beginPage, endPage
     for page in xrange(beginPage, endPage + 1):
         page = (page - 1) * 50
         url = "http://tieba.baidu.com/f?{}&pn={}".format(str(kw), str(page))
         data = loadPage(url)
         # print data
-        htmlSave(data, 'kw_xx_'+str(page)+'.html')
+        htmlSave(data, 'kw_{}_{}{}'.format(name, str(page), '.html'))
+
 
 def htmlSave(html, filename):
     with open(filename, 'w') as f:
         f.write(html)
 
+
 def loadPage(url):
-    print 'load:',url
+    print 'load:', url
     request = urllib2.Request(url, headers=config.userAgent)
     response = urllib2.urlopen(request)
     if response.code == 200:
@@ -38,8 +41,10 @@ def main():
         beginPage = raw_input("开始页:")
         endPage = raw_input("结束页:")
         if all((kw, beginPage, endPage)):
-            tiebaSpider()
+            tiebaSpider(kw, beginPage, endPage)
             break
+        else:
+            tiebaSpider()
 
 
 if __name__ == '__main__':
