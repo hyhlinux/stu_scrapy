@@ -1,0 +1,28 @@
+1.HTTP 工具、基本概念
+
+
+	gzip: 
+	9.Accept-Charset
+		unicode: 不可变长.
+		utf-8:unicode 的可变长.
+			  字母  1B
+			  汉子  3B
+
+		gbk  简体中文
+
+
+
+	HTTP格式:
+		1.请求行
+		2.请求头
+		3.请求体
+
+	10.Cookie:
+		本地浏览器
+
+
+	11.Content-Type:POST请求
+
+
+
+2.
