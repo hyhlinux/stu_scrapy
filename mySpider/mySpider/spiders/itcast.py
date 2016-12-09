@@ -34,3 +34,4 @@ class ItcastSpider(scrapy.Spider):
         # 直接返回最后数据
         print('ret:', len(items))
         return items
+        # yield items
