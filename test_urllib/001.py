@@ -1,5 +1,5 @@
 # coding:utf-8
-
+import config
 import urllib2
 
 url = 'http://www.baidu.com'
@@ -14,3 +14,8 @@ response = urllib2.urlopen(req)
 print response
 html = response.read()
 print 'html:', html
+
+
+
+
+

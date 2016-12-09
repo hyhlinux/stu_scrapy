@@ -34,7 +34,8 @@ class Spider:
             self.dealPage(each)
 
     def dealPage(self, data):
-        each = data.replace("<p>", "").replace("<br>", "").replace("<br />","").replace("</p>","")
+        each = data.replace("<p>", "").replace(
+            "<br>", "").replace("<br />", "").replace("</p>", "")
         self.writePage(each)
 
     def writePage(self, each):
@@ -54,5 +55,5 @@ class Spider:
 
 if __name__ == '__main__':
     spider = Spider()
-    spider.loadPage()
-    # spider.work()
+    # spider.loadPage()
+    spider.work()

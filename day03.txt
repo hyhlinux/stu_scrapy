@@ -1,0 +1,25 @@
+1.request 
+	1.get
+	2.post
+	3.fileupload
+	4.cookie
+	5.代理
+	6.ssl证书验证.
+
+2.
+糗事:
+
+http://www.qiushibaike.com/
+http://www.qiushibaike.com/8hr/page/2/?s=4936935
+http://www.qiushibaike.com/8hr/page/4/?s=4936935
+http://www.qiushibaike.com/8hr/page/2/?s=44
+
+page:
+s=自己给
+
+
+2.段子位置
+
+
+
+
